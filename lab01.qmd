@@ -1,5 +1,5 @@
 ---
-title: "BEE 4750 Lab 1: Julia Basics"
+title: "BEE 4750 Lab 1: Julia and GitHub Basics"
 format:
     html:        
         warning: true
@@ -8,7 +8,7 @@ format:
         warning: true
         error: true
         code-annotation: below
-jupyter: julia-1.9
+engine: julia
 format-links: []
 ---
 
@@ -21,7 +21,7 @@ format-links: []
 ::: {.callout-important icon=false}
 ### Due Date
 
-Friday, 9/1/23, 9:00pm
+Wednesday, 8/28/24, 9:00pm
 :::
 
 ::: {.content-visible when-format="html"}
@@ -49,6 +49,10 @@ Pkg.instantiate()
 ```
 
 This next cell loads packages which are required for the rest of the code evaluation. In this case, we only need to load the `Plots.jl` plotting package, but you will see others over the course of the semester (and can add more if desired; just make sure that you've [added the new packages to the environment](https://viveks.me/environmental-systems-analysis/tutorials/julia-basics.html#package-management)). Standard Julia practice is to load all of the needed packages at the top of the file.
+
+::: {.callout-warning}
+Loading packages can take a while, especially the first time! Julia tries to precompile all of the packages you're using so repeat use is faster, but this can be quite slow at first.
+:::
 
 ```{julia}
 #| output: false
@@ -149,14 +153,15 @@ You are also highly encouraged to post on [Ed Discussion](https://us.edstem.org)
 
 ## Exercises (10 points)
 
-Use your understanding of Julia syntax to complete the following (hopefully short) exercises. Convert your completed notebook to a PDF and submit it to the Gradescope Assignment "Lab 1".
+Use your understanding of Julia syntax and the GitHub workflow to complete the following (hopefully short) exercises. Convert your completed lab assignment to a PDF and submit it to the Gradescope Assignment "Lab 1".
 
 **Remember to**:
 
-- Evaluate all of your code cells, in order (using a `Run All` command). This will make sure all output is visible and that the code cells were evaluated in the correct order.
+- Include a (succint but clear) writeup of the core idea underlying your code, through some combination of equations, text, and algorithms. As you are not required to submit your code, we will not be looking at it in detail, and instead will rely on those writeups to assess whether your approach is correct.
+- If using the notebook, evaluate all of your code cells, in order (using a `Run All` command). This will make sure all output is visible and that the code cells were evaluated in the correct order.
 - Tag each of the problems when you submit to Gradescope; a 10% penalty will be deducted if this is not done.
 
-### Exercise 1 (3 points)
+### Computing a Dot Product
 
 Given two numeric arrays `x` and `y`, write a function to compute their dot product if they have equal length, and return an error if not (this is useful for debugging!). Use the following code as a starting point. 
 
@@ -194,19 +199,9 @@ Let's also make sure we get an error when the dimensions of the two vectors don'
 dot_product([1 2 3], [4 5])
 ```
 
-### Exercise 2 (3 points)
+### Making a Plot 
 
-This problem involves implementing Newton's method for computing square roots; it was shamelessly copied from MIT's [Introduction to Computational Thinking](https://computationalthinking.mit.edu/Spring21/hw0/). You will use a `while` loop instead of the `for` loop shown above.
-
-Implement the following algorithm in a function `newton_sqrt`:
-
-Given $x > 0$:
-
-1. Take a guess $a$.
-2. Divide $x$ by $a$.  
-3. Update $a$ as the average of $x/a$ and $a$.
-4. Repeat until $x/a$ is within a tolerance of $\varepsilon$ from $a$.
-5. Return $a \approx \sqrt{x}$.
+Write a function to compute the square of an integer `x`. Evaluate this function for integers between $x=-5$ and $x=5$ and make a plot of the squared values (you can find a quick guide to making various types of plots [here](https://viveks.me/environmental-systems-analysis/tutorials/julia-plots.html)). Make sure to label your axes. 
 
 ```{julia}
 #| eval: false
@@ -214,37 +209,31 @@ Given $x > 0$:
 
 ```
 
-Use your `newton_sqrt` function to compute $\sqrt{2}$ to within a tolerance of $\varepsilon = 0.01$.
+## Commit and Push Your Changes to GitHub 
 
-```{julia}
-#| eval: false
-# insert your code here
+After completing the previous two exercises, commit your solution file (notebook or otherwise) and push to GitHub. Use an informative commit message which makes it clear what changes you've made. The specific workflow for this will vary depending on how you're writing up your solutions; please search for specifics and ask for help as needed!
 
-```
-
-### Exercise 3: Making a Plot (3 points)
-
-Write a function to compute the square of an integer `x`. Evaluate this function for integers between $x=-5$ and $x=5$ and make a plot of the squared values (you can find a quick guide to making various types of plots [here](../tutorials/julia-plots.html)). Make sure to label your axes. 
-
-```{julia}
-#| eval: false
-# insert your code here
-
-```
-
-## Export and Submit the Notebook (1 point)
-
-The last step is to export the notebook for submission to Gradescope (this section won't be repeated going forward, but the steps are the same).
-
-You should see the following menu bar at the top of the VS Code window:
-![Notebook Menu Bar](figures/vs-code-top-bar.png)
-
-1. Click "Run All" at the top to execute all of the cells in order. **Please do not forget to do this before exporting and submitting or you may lose points because your code has not been executed or may have errors**.
-2. Click the ellipsis ("...") and select "Export". If you have LaTeX installed, you can click "PDF"; otherwise, click "HTML." Save the file, and then when prompted, open the file. This should open the page in your browser; go to the print interface and save as a PDF.
 ::: {.callout-tip}
-When printing to PDF, long lines will run off the edge of code cells, which may result in comments or code being hidden. If you see this, go back to the notebook and break up long lines into shorter onces (for example, see the comment in the above code cell) to ensure key parts of your results aren't missing.
+## Useful Commit Sizes
+
+Ideally, you'd commit whenever you make a "substantial" enough change that you want to lock in, such as writing the core code for a problem or completing a problem, if you're preparing code to be used elsewhere (by yourself or others), or if you want to ask for help. `git` lets you revert changes back to a previous commit, so it's easy to undo changes or updates which broke something that was previously working, so changing too many things at once can make it hard to keep track of what worked when.
+
+But in this case, go ahead and just commit after finishing the problems.
 :::
 
-Great! That's the basic workflow for every assignment in this course. 
+Push the repository with these commits to GitHub and take a screenshot of the repository page (`https://github.com/BEE4750-FA24/<username>/lab01`) which shows the updated repository. Include that screenshot in your submission as the solution to this problem.
 
-Now you have your PDF that you can submit to Gradescope. Make sure that you tag pages corresponding to relevant problems to avoid a 10% penalty.
+
+## Submitting PDF
+
+::: {.callout-important}
+These submission instructions will not be repeated on future assignments!
+:::
+
+Export your writeup as a PDF and submit it to the "Lab 1" assignment on Gradescope. Make sure that you tag pages corresponding to relevant problems to avoid a 10% penalty.
+
+::: {.callout-tip}
+## Printing Code to PDF
+You are not required to submit your code when submitting assignments. However, when printing a notebook to PDF, long lines will run off the edge of code cells, which may result in comments or code being hidden. If you see this, go back to the notebook and break up long lines into shorter onces (for example, see the comment in the above code cell) to ensure key parts of your results aren't missing.
+:::
+

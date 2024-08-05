@@ -1,5 +1,6 @@
 ---
 title: "BEE 4750 Lab 1: Julia and GitHub Basics"
+date: last-modified
 format:
     html:        
         warning: true
@@ -14,7 +15,8 @@ format:
             \usepackage{fvextra}
             \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
             \DefineVerbatimEnvironment{OutputCode}{Verbatim}{breaklines,commandchars=\\\{\}}
-
+execute: 
+    echo: true
 engine: julia
 format-links: [pdf, ipynb]
 ---

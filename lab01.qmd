@@ -9,7 +9,7 @@ format:
         error: true
         code-annotation: below
 engine: julia
-format-links: []
+format-links: [pdf, ipynb]
 ---
 
 ::: {.content-visible when-format="ipynb"}

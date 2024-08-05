@@ -160,7 +160,7 @@ There is no shame in using Google, or other resources, for help when programming
 You are also highly encouraged to post on [Ed Discussion](https://us.edstem.org), though getting a response might be less immediate. Just be mindful that to get good answers, [you have to help people help you](https://stackoverflow.com/help/how-to-ask), and **make sure to give credit to any resources that were helpful**!
 
 
-## Exercises (10 points)
+## Exercises (3 points)
 
 Use your understanding of Julia syntax and the GitHub workflow to complete the following (hopefully short) exercises. Convert your completed lab assignment to a PDF and submit it to the Gradescope Assignment "Lab 1".
 

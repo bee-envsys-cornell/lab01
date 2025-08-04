@@ -30,7 +30,7 @@ format-links: [pdf, ipynb]
 ::: {.callout-important icon=false}
 ### Due Date
 
-Wednesday, 8/28/24, 9:00pm
+Thursday, 8/28/24, 9:00pm
 :::
 
 ::: {.content-visible when-format="html"}
@@ -172,7 +172,7 @@ Use your understanding of Julia syntax and the GitHub workflow to complete the f
 
 ### Computing a Dot Product
 
-Given two numeric arrays `x` and `y`, write a function to compute their dot product if they have equal length, and return an error if not (this is useful for debugging!). Use the following code as a starting point. 
+Given two numeric arrays `x` and `y`, write a function to compute their dot product if they have equal length, and return an error if not (this is useful for debugging!). Use the following code as a starting point. **Do not use a built-in function**.
 
 ```{julia}
 #| eval: false
@@ -230,7 +230,7 @@ Ideally, you'd commit whenever you make a "substantial" enough change that you w
 But in this case, go ahead and just commit after finishing the problems.
 :::
 
-Push the repository with these commits to GitHub and take a screenshot of the repository page (`https://github.com/BEE4750-FA24/<username>/lab01`) which shows the updated repository. Include that screenshot in your submission as the solution to this problem.
+Push the repository with these commits to GitHub and take a screenshot of the repository page (`https://github.com/BEE4750-FA25/<username>/lab01`) which shows the updated repository. Include that screenshot in your submission as the solution to this problem.
 
 
 ## Submitting PDF
@@ -239,7 +239,7 @@ Push the repository with these commits to GitHub and take a screenshot of the re
 These submission instructions will not be repeated on future assignments!
 :::
 
-Export your writeup as a PDF and submit it to the "Lab 1" assignment on Gradescope. Make sure that you tag pages corresponding to relevant problems to avoid a 10% penalty.
+Export your writeup as a PDF (this doesn't have to be a notebook if you're struggling to export: you can do your writeup in *e.g.* Microsoft Word) and submit it to the "Lab 1" assignment on Gradescope. **Make sure that you tag pages corresponding to relevant problems to avoid a 10% penalty**.
 
 ::: {.callout-tip}
 ## Printing Code to PDF

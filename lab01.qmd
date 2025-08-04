@@ -18,6 +18,8 @@ format:
 execute: 
     echo: true
 engine: julia
+julia:
+  exeflags: ["+1.11.5"]
 format-links: [pdf, ipynb]
 ---
 

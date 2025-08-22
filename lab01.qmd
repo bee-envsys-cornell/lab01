@@ -245,6 +245,6 @@ Export your writeup as a PDF (this doesn't have to be a notebook if you're strug
 
 ::: {.callout-tip}
 ## Printing Code to PDF
-You are not required to submit your code when submitting assignments. However, when printing a notebook to PDF, long lines will run off the edge of code cells, which may result in comments or code being hidden. If you see this, go back to the notebook and break up long lines into shorter onces (for example, see the comment in the above code cell) to ensure key parts of your results aren't missing.
+You are not required to submit your code when submitting assignments. However, when printing a notebook to PDF (whether you do this locally or via the GitHub Action), long lines will run off the edge of code cells, which may result in comments or code being hidden. If you see this, go back to the notebook and break up long lines into shorter onces (for example, see the comment in the above code cell) to ensure key parts of your results aren't missing.
 :::
 
